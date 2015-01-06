@@ -1,0 +1,4 @@
+auth:
+  account: 'YOUR_AIRBRAKE_ACCOUNT_NAME'
+  auth_token: 'YOUR_AIRBRAKE_AUTH_TOKEN'
+keywords: ['KEYWORDS','THAT','GIVES','ERRORS','HIGHER','PRIORITY']
