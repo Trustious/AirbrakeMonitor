@@ -1,0 +1,3 @@
+%h1 Select a project
+- $projects.each do |project|
+  %h3 <a href="#{request.path_info}?projectid=#{project.id}">#{project.name}</a>

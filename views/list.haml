@@ -1,0 +1,15 @@
+%h1 #{@title} in #{@project_name}
+%table.pure-table
+  %thead
+    %tr
+      %td Error Message
+      %td Count
+      %td ID
+      %td Last Happened At
+  %tbody
+    - @errors.each do |error|
+      %tr
+        %td= error[0].error_message
+        %td= error[0].notices_count
+        %td <a href="https://#{$config['auth']['account']}.airbrake.io/projects/#{@projectid}/groups/#{error[0].id}">#{error[0].id}</a>
+        %td= error[0].most_recent_notice_at
