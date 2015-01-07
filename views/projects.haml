@@ -1,3 +1,6 @@
 %h1 Select a project
 - $projects.each do |project|
-  %h3 <a href="#{request.path_info}?projectid=#{project.id}">#{project.name}</a>
+  - if request.fullpath.include? "?"
+    %h3 <a href="#{request.fullpath}&project_id=#{project.id}">#{project.name}</a>
+  - else
+    %h3 <a href="#{request.fullpath}?project_id=#{project.id}">#{project.name}</a>

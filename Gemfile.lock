@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ahmadsoliman/airbrake_tools.git
-  revision: f289da5ab6ed0e7d219e3b810e30ef468769a151
+  revision: 892dbd66b26ce578a7a010fe5cf674ce2d063e7e
   specs:
     airbrake_tools (1.1.4)
       airbrake-api (>= 4.5.1)

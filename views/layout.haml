@@ -15,5 +15,11 @@
               %a{ :href => "/" } Home
             %li.pure-menu-selected
               %a{ :href => "/hot" } Hot Errors
+      .search
+        %form#search-form.pure-form{ :action => "/search", :method => "get", :enctype => "multipart/form-data" }
+          - if @project
+            %input#project_id{ :type => "hidden", :name => "project_id", :value => @project.id }
+          %input#search_text{ :type => "text", :name => "search_text", :value => @search_text, :style => "width: 80%;"}
+          %button.pure-button.pure-button-primary{ :type => "submit" } Search
       .main
         = yield

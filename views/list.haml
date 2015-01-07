@@ -1,5 +1,5 @@
-%h1 #{@title} in #{@project_name}
-%table.pure-table
+%h1 #{@title} in #{@project.name}
+%table.pure-table{:style => "width: 100%"}
   %thead
     %tr
       %td Error Message
@@ -11,5 +11,5 @@
       %tr
         %td= error[0].error_message
         %td= error[0].notices_count
-        %td <a href="https://#{$config['auth']['account']}.airbrake.io/projects/#{@projectid}/groups/#{error[0].id}">#{error[0].id}</a>
+        %td <a href="https://#{$config['auth']['account']}.airbrake.io/projects/#{@project.id}/groups/#{error[0].id}">#{error[0].id}</a>
         %td= error[0].most_recent_notice_at
