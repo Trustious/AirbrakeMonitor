@@ -13,8 +13,10 @@
           %ul
             %li
               %a{ :href => "/" } Home
-            %li.pure-menu-selected
+            %li
               %a{ :href => "/hot" } Hot Errors
+            %li
+              %a{ :href => "/keywords" } Keywords
       .search
         %form#search-form.pure-form{ :action => "/search", :method => "get", :enctype => "multipart/form-data" }
           - if @project
